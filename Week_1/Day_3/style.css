@@ -1,0 +1,56 @@
+/* universal selector */
+/* 
+* {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+} */
+
+/*  body {
+  background-color: red;
+  font-size: 40px;
+} 
+ */
+
+/* 
+selectors {
+  property: value
+  property: value
+}
+ */
+
+/* Type selector */
+
+p {
+  color: red;
+}
+
+/* class selector */
+
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+.red-bg {
+  /* color name */
+  /* background-color: red; */
+  /* hex code (hexadecimal) */
+  background-color: rgb(255, 0, 0);
+  /* background-color: #f00; */
+  /*   background-color: rgba(255, 0, 0, 1); */
+  background-color: rgb(255, 0, 0, 0.5);
+}
+
+.green-bg {
+  background-color: green;
+}
+.blue-bg {
+  background-color: blue;
+}
+
+#main-box {
+  width: 600px;
+  height: 600px;
+  background-color: pink;
+}
