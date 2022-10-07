@@ -1,0 +1,133 @@
+/* box-sizing */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Advanced Selectors */
+
+/* Direct descendant */
+/* Only targets the direct children elements, not ALL elements that are inside */
+body {
+  background-image: url('../images/download.jpeg');
+}
+
+.menu > li {
+  width: 100px;
+  height: 50px;
+  font-size: 32px;
+  color: red;
+}
+
+/* ul > div > div > div > li {
+  height: 500px;
+} */
+
+/* Descendant selector */
+
+.menu li {
+  background-color: pink;
+}
+
+/* Adjacent selector */
+
+#former + div {
+  background-color: red;
+}
+
+/* Multiple selection */
+
+/* div,
+.menu > li,
+p {
+  border: 1px solid black;
+} */
+
+/* attribute selector */
+
+a[href*='hack'] {
+  color: green;
+}
+
+/* Box model */
+
+.box2 {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  color: white;
+
+  /* border */
+  /*   border-width: 10px;
+  border-color: black;
+  border-style: solid; */
+
+  /* shorthand */
+  border: 10px solid black;
+  /* border-bottom: 20px dotted red; */
+  /* border-radius: 50%; */
+
+  /*   border-top-left-radius: 30px; */
+
+  /* Padding */
+  /* Applies to all sides */
+  /* padding: 20px; */
+  /* Applies to the top */
+  /*  padding-top: 50px; */
+
+  /* Apply vertically and horizontally */
+  padding: 50px 20px;
+  padding: 50px 100px 20px 30px;
+  /* margin */
+  margin-bottom: 50px;
+  margin: 100px 200px 400px 300px;
+}
+
+.red {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+/* Positioning */
+
+/* 
+static
+relative
+fixed
+absolute
+*/
+
+.box {
+  border: 2px solid;
+  width: 500px;
+}
+
+/* Static, is a non positioned element */
+
+.static {
+  border-color: green;
+}
+
+.relative {
+  position: relative;
+  left: 100px;
+  top: 10px;
+  border-color: red;
+}
+
+.fixed {
+  background-color: aquamarine;
+  position: fixed;
+  left: calc(50vw - 250px);
+
+  bottom: calc(50vh - 100px);
+  height: 200px;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+}
