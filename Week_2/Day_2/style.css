@@ -1,0 +1,18 @@
+.dark {
+  background-color: #444;
+  color: antiquewhite;
+}
+
+#start {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  font-size: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
