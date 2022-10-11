@@ -55,9 +55,20 @@ let addBtn = document.getElementById('add-item-btn');
 
 //onClick
 
-addBtn.onclick = function () {
-  console.log('Button was clicked');
-};
+let list = document.getElementById('item-list');
+let count = 1;
+
+/* addBtn.onclick = function () {
+  //console.log('Button was clicked');
+  //First we create the element
+  let newLi = document.createElement('li');
+  //Then we add content
+  newLi.innerHTML = `Item number ${count}`;
+  //Append it to the list
+  list.appendChild(newLi);
+  //increase the count
+  count++;
+}; */
 
 //When the button is clicked:
 // Add to the ul an li with the text:
@@ -66,3 +77,46 @@ addBtn.onclick = function () {
 //Target the elements
 //Create elements
 // Insert elements
+
+//Inputs and values
+let taskInput = document.getElementById('task');
+console.log(taskInput.value);
+
+addBtn.onclick = function () {
+  //Create li
+  let newTask = document.createElement('li');
+  //Set the content of the li to be the input value
+  newTask.innerHTML = taskInput.value;
+  //also pass a function to the new element
+  newTask.onclick = function (e) {
+    //Once you click the li, give it a line-trough
+    //Bonus 1  - Once you click again, it removes it
+    if (newTask.style.textDecoration === 'line-through') {
+      newTask.style.textDecoration = '';
+    } else {
+      newTask.style.textDecoration = 'line-through';
+    }
+
+    console.log(e.currentTarget.innerHTML);
+    //Bonus iteration: Delete the li
+  };
+  //add li to the list
+  list.appendChild(newTask);
+  //clear the input
+  taskInput.value = '';
+};
+
+//CurrentTarget
+
+//getting all the lis
+let allLi = document.getElementsByTagName('li');
+
+//looping over all of them
+for (let i = 0; i < allLi.length; i++) {
+  //giving a function to all of them
+  allLi[i].onclick = function (e) {
+    console.log(e.currentTarget.innerHTML);
+
+    //parentNode
+  };
+}
