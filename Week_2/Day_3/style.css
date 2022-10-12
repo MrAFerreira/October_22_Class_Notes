@@ -1,0 +1,139 @@
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.red {
+  background-color: red;
+  /* order */
+  order: 1;
+  flex-grow: 1;
+}
+.green {
+  background-color: green;
+  order: 2;
+  flex-grow: 2;
+}
+.blue {
+  background-color: blue;
+  /* order: 0 */
+}
+.yellow {
+  background-color: yellow;
+  /* order: 0 */
+}
+
+/* display: flex */
+
+.container {
+  height: 100vh;
+  display: flex;
+
+  /* flex-direction */
+  /* row, column, row-reverse, column-reverse */
+  flex-direction: row;
+
+  /* wrap */
+  flex-wrap: wrap;
+
+  /* space-around - same margin on left and right for each element */
+  /* space-evenly - same margin on everything (including the edge of the container */
+  /* space-between - same margin between elements but no margin on the edges */
+  /* justify will be horizontal by default, vertical if using column */
+  justify-content: space-between;
+
+  /* align will be vertical by default, horizontal if using column */
+  align-items: center;
+}
+
+.responsive {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+/* @media (min-width: 1000px) {
+  .responsive {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 999px) {
+  .responsive {
+    background-color: green;
+  }
+}
+ */
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  section {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .news {
+    width: 35vw;
+    height: 20vh;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .news {
+    font-size: 20px;
+  }
+}
+
+/* units */
+/* 
+px - pixels
+vw - viewport width
+vh - viewport height
+vmin - smallest of the above
+vmax - biggest of the above
+em
+rem
+
+*/
+
+.view {
+  background-color: red;
+  width: 50vw;
+  height: 50vh;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* em */
+/* related to the parent element font size */
+/* ul {
+  font-size: 10px;
+} */
+
+li {
+  font-size: 1.6rem;
+}
+
+/* rem */
+/* related to root font size (16px by default) */
+
+/* li {
+  font-size: 2rem;
+} */
+
+@media (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+}
