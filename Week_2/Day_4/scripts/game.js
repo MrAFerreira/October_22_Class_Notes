@@ -79,3 +79,11 @@ class Game {
     }
   }
 }
+
+// What is your game idea?
+// What's the game logic?
+// How does the game end?
+// What is your MVP ?
+// How are you going to implement the logic?
+// Your biggest difficulties
+// Bonus
