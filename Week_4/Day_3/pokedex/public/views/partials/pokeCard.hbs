@@ -5,5 +5,11 @@
   <div class='card-body'>
     <h5 class='card-title'> {{name}} <span>Nº: {{id}}</span></h5>
     <p class='card-text'>{{type}}</p>
+    {{#if brewer_tips}}
+      <p>{{brewer_tips}}</p>
+    {{/if}}
+    {{#if food_pairings}}
+      <p>{{food_pairings}}</p>
+    {{/if}}
   </div>
 </div>
