@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<hr />
+<p>by: {{author}}</p>
+<p> description: {{description}}</p>
+<a href='/book-edit/{{_id}}'>Edit book</a>
+
+<form action='/book-delete/{{_id}}' method='post'>
+  <button type='submit'>Delete Book</button>
+</form>
