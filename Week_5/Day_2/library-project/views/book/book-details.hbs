@@ -1,0 +1,44 @@
+<h1>{{book.title}}</h1>
+<hr />
+<p>by: {{book.author}}</p>
+<p> description: {{book.description}}</p>
+<a href='/book-edit/{{book._id}}'>Edit book</a>
+
+<form action='/book-delete/{{book._id}}' method='post'>
+  <button type='submit'>Delete Book</button>
+</form>
+
+<hr />
+
+<h4>Leave a review!</h4>
+
+<form action='/review/create/{{book._id}}' method='post'>
+
+  <select name='author'>
+    {{#each users}}
+      <option value='{{_id}}'>{{username}}</option>
+    {{/each}}
+  </select>
+
+  <label for='content'>Content</label>
+  <textarea name='content' id='content' cols='30' rows='10'></textarea>
+  <button type='submit'>Create Review</button>
+
+</form>
+
+<hr />
+
+{{#each book.reviews}}
+  <div>
+
+    <p><span>By {{author.username}}</span>: {{content}}</p>
+    <form action='/review/delete/{{_id}}' method='post'>
+      {{! Bonus after lab: 
+   Remove the id from the book
+
+ }}
+
+      <button type='submit'>X</button>
+    </form>
+  </div>
+{{/each}}
